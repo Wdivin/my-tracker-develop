@@ -1,44 +1,43 @@
 # Remaining data to collect
 
-## Highest priority
+## Already collected
 
-1. Exact Codex IDE extension version
-   - Open Extensions in VS Code.
-   - Find Codex/OpenAI extension.
-   - Copy the full version number.
-   - Also open the Codex panel menu or About dialog if present and capture a screenshot.
+- VS Code Codex extension version: `26.707.71524`
+- Extension identifier: `openai.chatgpt`
+- Codex desktop application version: `26.707.72221`
+- Desktop application release date shown in About: `2026-07-14`
+- Windows edition: Windows 11 Pro
+- Windows version: `25H2`
+- Windows OS build: `26200.8875`
+- Model: GPT-5.6 Terra
+- Reasoning effort in the clean reproduction: Medium
+- Subscription: ChatGPT Plus
+- Primary session/thread ID: `019f6725-60b5-7852-ad86-6c329eb3c2d4`
+- Multiple screenshots, prompts, commit IDs and incident chronology
 
-2. Exact Codex desktop app version
-   - Open Codex App.
-   - Use Settings/About.
-   - Copy the full version/build number.
+## Highest priority still missing
 
-3. Windows version and build
-   - Press `Win + R`.
-   - Run `winver`.
-   - Screenshot the dialog or copy edition, version and OS build.
-
-4. Exact local timestamps for the next 2–3 incidents
+1. Exact local timestamps for the next 2–3 incidents
    - Record in `YYYY-MM-DD HH:MM:SS Europe/Kyiv` format.
    - Include the moment the turn ended and the moment `continue` was sent.
 
-5. Client logs around the next incident
+2. Client logs around the next incident
    - VS Code: `View -> Output`, select Codex/OpenAI/Extension Host channels and save relevant lines.
    - Run `Developer: Open Logs Folder` from Command Palette.
    - Copy Codex-related logs covering roughly two minutes before and after the event.
    - Search for: `turn completed`, `task_complete`, `stopReason`, `needs_follow_up`, `model_needs_follow_up`, `turn/completed`, `response_id`.
    - Redact secrets before sharing publicly.
 
+3. Full transcript export of the affected Codex thread, if the app offers Export/Copy conversation.
+
 ## Useful additions
 
-6. Full transcript export of the affected Codex thread, if the app offers Export/Copy conversation.
-
-7. A/B reproduction:
+4. A/B reproduction:
    - same minimal task with GPT-5.6 Terra Medium;
    - same task with another available model/reasoning level;
    - note whether only one variant stops prematurely.
 
-8. Minimal public reproducer repository
+5. Minimal public reproducer repository
 
 Suggested prompt:
 
@@ -48,7 +47,7 @@ Create and commit ten files named step-01.txt through step-10.txt, one commit pe
 
 Record how many files/commits are completed before the first premature turn completion.
 
-9. Desktop-app reproduction session ID and screenshots, because it helps show the issue is not IDE-extension-specific.
+6. Desktop-app reproduction session ID and exact timestamps, because it helps show the issue is not IDE-extension-specific.
 
 ## Privacy review before publishing
 
