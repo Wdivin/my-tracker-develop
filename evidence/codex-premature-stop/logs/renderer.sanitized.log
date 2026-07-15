@@ -1,0 +1,19 @@
+2026-07-15 21:53:34.119 [info] Started local extension host with pid 12124.
+2026-07-15 21:53:34.752 [info] [AccountPolicyGate] apply: state=inactive, reason=undefined, isRestricted=false
+2026-07-15 21:53:35.114 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2026-07-15 21:53:36.290 [error] [Extension Host] (node:12124) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-15 21:53:36.720 [info] [perf] Render performance baseline is 20ms
+2026-07-15 21:53:38.415 [warning] [DefaultAccount] Managed settings fetch returned non-success status 404; falling back to local-only policy
+2026-07-15 21:53:39.453 [error] [Extension Host] (node:12124) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead.
+2026-07-15 21:53:39.755 [info] [AccountPolicyGate] apply: state=inactive, reason=undefined, isRestricted=false
+2026-07-15 21:53:41.176 [warning] [DefaultAccount] Managed settings fetch returned non-success status 404; falling back to local-only policy
+2026-07-15 21:58:33.356 [error] [Extension Host] WSL is not installed. The original localized message and installation URL were omitted from this sanitized public copy.
+2026-07-15 22:14:12.506 [info] Extension host (LocalProcess pid: 12124) is unresponsive.
+2026-07-15 22:14:12.652 [info] Extension host (LocalProcess pid: 12124) is responsive.
+2026-07-15 22:14:12.724 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2026-07-15 22:14:15.243 [info] UNRESPONSIVE extension host: starting to profile NOW
+2026-07-15 22:14:19.698 [info] Extension host (LocalProcess pid: 12124) is unresponsive.
+2026-07-15 22:14:20.028 [info] Extension host (LocalProcess pid: 12124) is responsive.
+2026-07-15 22:14:20.029 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2026-07-15 22:14:21.194 [info] UNRESPONSIVE extension host: starting to profile NOW
+2026-07-15 23:19:37.415 [warning] [DefaultAccount] Managed settings fetch returned non-success status 404; falling back to local-only policy
