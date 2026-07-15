@@ -10,14 +10,19 @@ Observed in Codex IDE workflow and previously in the Codex desktop application.
 
 ## Environment
 
+- VS Code extension: Codex — OpenAI's coding agent
+- Extension identifier: `openai.chatgpt`
+- Extension version: `26.707.71524`
+- Codex desktop application version: `26.707.72221`
+- Desktop application release date shown in About: `2026-07-14`
 - Model: GPT-5.6 Terra
-- Reasoning effort: Medium/High (visible in screenshots)
-- OS: Windows 11
+- Reasoning effort: Medium in the clean reproduction; Medium/High visible across earlier screenshots
+- Subscription: ChatGPT Plus
+- OS: Windows 11 Pro 25H2, build `26200.8875`
 - Repository: private Laravel project
 - Session/thread ID: `019f6725-60b5-7852-ad86-6c329eb3c2d4`
 - Task: long multi-stage coding task with many file edits, MySQL migrations, tests, commits and pushes
 - Context during incidents: about 23–30% remaining
-- Exact client version / Windows build: to be added
 
 ## Summary
 
@@ -71,6 +76,7 @@ This immediately resumes work, but the premature completion can recur.
 - Multiple screenshots show `Worked for 27s–1m09s`, tiny file changes, incomplete stage text, and the input box becoming available again.
 - Exact prompts explicitly forbidding intermediate stops are preserved.
 - Repository commits involved include `deb6b4c`, `e95d8e0`, `0d556fc`, and `f356596`.
+- Environment screenshots document extension `26.707.71524`, desktop app `26.707.72221`, and Windows 11 Pro 25H2 build `26200.8875`.
 
 ## Possibly related
 
