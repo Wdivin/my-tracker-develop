@@ -1,6 +1,6 @@
 # Codex premature turn completion — evidence pack
 
-Prepared from the My Tracker comparison experiment on 2026-07-15.
+Prepared from the My Tracker comparison experiment on 2026-07-15 and updated on 2026-07-16.
 
 ## Summary
 
@@ -14,21 +14,25 @@ During a long multi-stage implementation task, Codex repeatedly ended the curren
 - a manual `continue` immediately resumed productive work;
 - the model itself later stated that it had incorrectly treated a successful local step or commit as a natural turn-completion point, but the behavior still continued.
 
-The behavior was observed in the Codex IDE workflow and had also been observed earlier in the Codex desktop application, so the working hypothesis is a core agent-loop/model-behavior issue rather than a VS Code-only issue.
+The behavior was observed in the Codex IDE workflow and had also been observed earlier in the Codex desktop application, so the original working hypothesis was a core agent-loop/model-behavior issue rather than a VS Code-only issue.
+
+A later same-session comparison strengthened the model-specific hypothesis: after switching from GPT-5.6 Terra to GPT-5.6 Sol at the same Medium reasoning level, Sol completed the remaining stages 5–14 after one continuation command and did not require further manual prompting. See `SOL_VS_TERRA_AB_TEST.md`.
 
 ## Known environment
 
-- Repository: `Wdivin/my-tracker-codex-v2` (private)
+- Evidence repository: `Wdivin/my-tracker-develop`
+- Implementation repository: `Wdivin/my-tracker-codex-v2`
 - Branch: `main`
 - Task type: long, multi-stage Laravel implementation
-- Model visible in screenshots: `5.6 Terra`, Medium or High reasoning depending on turn
-- Operating system visible from earlier screenshots/context: Windows 11
-- Session/thread ID visible in all captured IDE incidents: `019f6725-60b5-7852-ad86-6c329eb3c2d4`
-- Context during incidents: approximately 23–30% remaining; previous experience shows Codex compacts automatically around 8–9%, so context exhaustion was not involved
+- Affected model: `GPT-5.6 Terra`, primarily Medium reasoning
+- Comparison model: `GPT-5.6 Sol`, Medium reasoning
+- Operating system: Windows 11 Pro 25H2, build `26200.8875`
+- VS Code Codex extension: `openai.chatgpt` version `26.707.71524`
+- Codex desktop app: version `26.707.72221`
+- Session/thread ID: `019f6725-60b5-7852-ad86-6c329eb3c2d4`
+- Context during incidents: approximately 23–30% remaining; context exhaustion was not involved
 - GitHub Actions: not running on every intermediate push in this clean reproduction
 - Local services: OpenServerPanel, PHP 8.4, MySQL 8.4, Redis, Apache
-
-Exact Codex App/IDE extension version and Windows build still need to be collected.
 
 ## Reproduction pattern
 
@@ -55,4 +59,8 @@ The closest match is #27352: a progress message is emitted, the turn is marked c
 - `PROMPTS.md` — exact continuation and diagnostic prompts used
 - `BUG_REPORT_DRAFT.md` — ready-to-adapt GitHub issue draft
 - `MISSING_DATA.md` — remaining diagnostics to collect
-- `evidence/screenshots/` — screenshots captured in the conversation (included in the downloadable archive; not yet committed to GitHub because the available connector cannot upload binary files)
+- `ENVIRONMENT.md` — exact client and OS versions
+- `LOG_ANALYSIS_2026-07-15.md` — analysis of the full Codex client log
+- `SOL_VS_TERRA_AB_TEST.md` — same-session comparison between Terra and Sol
+- `logs/` — full and sanitized client-side logs, turn boundaries, privacy review, and incident excerpts
+- `screenshots/` — captured IDE, environment, and diagnostic screenshots
