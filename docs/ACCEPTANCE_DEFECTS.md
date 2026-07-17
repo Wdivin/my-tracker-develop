@@ -50,4 +50,4 @@
 | Дата | Вариант | Среда | Результат |
 |---|---|---|---|
 | 2026-07-17 | So | Ubuntu 26.04, Docker, PHP 8.4.23, MySQL 8.4, Redis 7, Caddy external proxy | Инфраструктура и production frontend собраны; миграции воспроизвели SO-001. После временного server-level workaround все 16 миграций применились. Scheduler, Redis и health-ready работают. |
-| 2026-07-17 | Cla | Та же изолированная Docker-среда | Начальная сборка общего внешнего runtime-Dockerfile остановилась до запуска приложения: `laravel/horizon` требует `ext-pcntl`; также Git потребовал safe-directory для build context. Это пока наблюдение по подготовленному нами runtime-образу, а не дефект кандидата: нужно сверить его INSTALL/DEPLOYMENT-документацию с требованием `pcntl`. |
+| 2026-07-17 | Cla | Та же изолированная Docker-среда | Общий внешний runtime-Dockerfile после добавления `ext-pcntl` и safe-directory успешно собрался. Это настройка тестового образа, не дефект кандидата. Чистая миграция MySQL 8.4 с включённым binary log прошла все 21 migration без глобального workaround. |
